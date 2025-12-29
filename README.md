@@ -34,7 +34,6 @@ The system supports both **single email classification** and **batch classificat
 ---
 
 ## 🛠 Tech Stack
-
 - Python  
 - Streamlit  
 - OpenAI API  
@@ -44,7 +43,6 @@ The system supports both **single email classification** and **batch classificat
 ---
 
 ## 📁 Project Structure
-
 email-intent-classifier/
 │
 ├── app/
@@ -64,81 +62,63 @@ email-intent-classifier/
 ├── .gitignore
 └── README.md
 
-yaml
-Copy code
 
 ---
 
 ## ⚙️ Setup Instructions
 
 ### Clone the repository
-```bash
 git clone https://github.com/sinci2573/email-intent-classifier.git
 cd email-intent-classifier
-Create and activate virtual environment
-bash
-Copy code
+
+## Create and activate virtual environment
 python -m venv venv
 venv\Scripts\activate
-Install dependencies
-bash
-Copy code
-pip install -r requirements.txt
-Set up environment variables
-Create a .env file in the project root:
 
-ini
-Copy code
-OPENAI_API_KEY=your_openai_api_key_here
+## Install dependencies
+pip install -r requirements.txt
+
+## Set up environment variables
+Create a .env file in the project root:
+OPENAI_API_KEY=YOUR_API_KEY
 The .env file is ignored by Git for security reasons.
 
-▶️ Running the Application
-bash
-Copy code
+## ▶️ Running the Application
 streamlit run app/app_streamlit.py
-The app will be available at:
 
-arduino
-Copy code
+The app will be available at:
 http://localhost:8501
-📊 CSV File Format
+
+## 📊 CSV File Format
 The CSV file must contain the following columns:
 
-subject	body
-Email subject	Email body content
+subject	              body
+Email subject	        Email body content
 
 The output CSV will include:
-
 intent
-
 priority
-
 sentiment
 
-🧠 Design Decisions
+## 🧠 Design Decisions
+
 The project initially used rule-based logic for transparency and testing
-
 It was later upgraded to an LLM-based classifier for improved accuracy
-
 A fallback mechanism ensures reliability when the LLM is unavailable
-
 The same logic is reused for both real-time and batch processing
 
-🤝 Collaboration
+## 🤝 Collaboration
 This project was developed collaboratively using GitHub with clean commit practices and secure handling of sensitive data.
 
-🔮 Future Enhancements
+## 🔮 Future Enhancements
+
 Confidence scores for predictions
-
 Improved evaluation metrics
-
 Support for larger CSV files
-
 Cloud deployment
-
 Fine-tuned domain-specific LLM models
 
-👩‍💻 Authors
-Sinchana
+## 👩‍💻 Authors
+Sinchana Suresh Ganiga
+Rithika Vinukumar
 
-Rithika
